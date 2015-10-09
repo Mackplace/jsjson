@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<!-- Estilos personalizados -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="tasks.css">
+
+0<!-- JQuery, Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- Handlebars -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+
+
+<script id="tablaCanciones" type="text/x-handlebars-template">
+
+    <tr style="width: auto">
+    <tr>
+        <th>Nombre</th>
+        <th>Artista</th>
+        <th>Álbum</th>
+    </tr>
+    {{#each this}}
+    <tr>
+
+        <td>{{name}}</td>
+        <td>{{artist}}</td>
+        <td>{{album}}</td>
+    </tr>
+
+
+    {{/each}}>
+
+
+</script>
+
+<!-- Scripts personalizados -->
+
+<script src="script.js"></script>
 <body>
 <h1>PlayList de Canciones</h1>
 
-<input type="button" value="Agregar PlayList" name="Agregar Cancion">
+<input type= "button" value="Agregar PlayList" name="Agregar Cancion">
 <input type="button" value="Crear PlayList" name="Crear PlayList">
 <input type="button" value="Borrar PlayList" name="Borrar PlayList">
-<table style="width: auto">
-  <th>Nombre</th>
-    <th>Artista</th>
-    <th>Álbum</th>
-    <tr>
-    <td>How To Save a Life</td>
-        <td>The Fray</td>
-        <td>Dunno</td>
-    </tr>
 
+<table id="tablaSongs">
 
 </table>
 
 
-
 </body>
 
-</html>
